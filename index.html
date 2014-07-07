@@ -50,7 +50,7 @@ out2.value = out.value * 8;
 //overcap
 	var form = document.getElementById("overcap");
 	var out3 = form.elements["hardcap"];
-	var out4 = form.elements["totalpower"];
+	var out4 = form.elements["totalpower"].toFixed(2);
 //	var out2 = form.elements["stacks"];
 	var powerrate = parseFloat(form.elements["powerrate"].value);
 
@@ -61,7 +61,6 @@ out4.value = (out3.value + 125);
 
 
 var form = document.getElementById("reputation");
-		//get output
 	var out5 = form.elements["20hrs"];
 	var out6 = form.elements["20hrsmarks"];
 	var out7 = form.elements["1hrs"];
@@ -69,13 +68,10 @@ var form = document.getElementById("reputation");
 	var out9 = form.elements["remainingrep"];
 	var T5 = 100000;
 	
-		//get two numbers
 	var currep = parseInt(form.elements["currentrep"].value);
-	//var num2 = parseInt(form.elements["y"].value);
-		//get operator
+
 	var repstanding = parseInt(form.elements["standing"].value);
-		//set output depending on operator
-switch(repstanding)
+	switch(repstanding)
 	{
 		case 2500: out7.value = ( (T5 - currep) / 200);
 	  	break;
@@ -89,10 +85,7 @@ switch(repstanding)
 out9.value = T5 - currep;
 out5.value = ( (T5 - currep) / repstanding);
 out6.value = (( (T5 - currep) / repstanding) * 30) ;
-//out7.value = ( (T5 - currep) / repstanding);
-//out8.value = (( (T5 - currep) / repstanding) * 30) ;
 
-//out7.value = standing;
 
 }
 
