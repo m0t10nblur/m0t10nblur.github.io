@@ -48,7 +48,7 @@ out.value = 1 + (num1 * .01);
 out2.value = out.value * 8;
 
 //overcap
-	var form = document.getElementById("overcap");
+	var form = parseFloat(document.getElementById("overcap").toFixed(2)) ;
 	var out3 = form.elements["hardcap"].toFixed(2);
 	var out4 = form.elements["totalpower"].toFixed(2);
 //	var out2 = form.elements["stacks"];
