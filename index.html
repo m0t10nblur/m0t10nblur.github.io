@@ -52,9 +52,9 @@ out2.value = out.value * 8;
 	var out3 = form.elements["hardcap"];
 	var out4 = form.elements["totalpower"];
 //	var out2 = form.elements["stacks"];
-	var ptr = parseFloat(form.elements["powerrate"].value) ;
+	var powerrate = parseFloat(form.elements["powerrate"].value);
 
-out3.value = (ptr * 4);
+out3.value = (powerrate * 4);
 out4.value = (out3.value + 125);
 
 //reputation
