@@ -54,8 +54,8 @@ out2.value = out.value * 8;
 //	var out2 = form.elements["stacks"];
 	var powerrate = parseFloat(form.elements["powerrate"].value);
 
-out3.value = (powerrate * 4).toFixed(2);
-out4.value = (powerrate * 4 + 125).toFixed(2);
+out3.value = parseFloat((powerrate * 4).toFixed(2));
+out4.value = parseFloat((powerrate * 4 + 125).toFixed(2));
 
 //reputation
 
