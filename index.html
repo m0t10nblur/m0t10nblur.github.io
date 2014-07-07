@@ -31,7 +31,7 @@ margin:3px; padding:2px;
 text-align:center; 
 background:#428bca; 
 color:#ffffff; 
-float:left; }
+float:left; } 
 </style>
 
 
@@ -60,8 +60,7 @@ out4.value = parseFloat(out3.value) + 125;
 //reputation
 
 
-var form = document.getElementById("reputation");
-		//get output
+	var form = parseFloat(document.getElementById("reputation").toFixed(2));
 	var out5 = form.elements["20hrs"];
 	var out6 = form.elements["20hrsmarks"];
 	var out7 = form.elements["1hrs"];
@@ -69,13 +68,10 @@ var form = document.getElementById("reputation");
 	var out9 = form.elements["remainingrep"];
 	var T5 = 100000;
 	
-		//get two numbers
 	var currep = parseInt(form.elements["currentrep"].value);
-	//var num2 = parseInt(form.elements["y"].value);
-		//get operator
+
 	var repstanding = parseInt(form.elements["standing"].value);
-		//set output depending on operator
-switch(repstanding)
+	switch(repstanding)
 	{
 		case 2500: out7.value = ( (T5 - currep) / 200);
 	  	break;
@@ -89,10 +85,7 @@ switch(repstanding)
 out9.value = T5 - currep;
 out5.value = ( (T5 - currep) / repstanding);
 out6.value = (( (T5 - currep) / repstanding) * 30) ;
-//out7.value = ( (T5 - currep) / repstanding);
-//out8.value = (( (T5 - currep) / repstanding) * 30) ;
 
-//out7.value = standing;
 
 }
 
@@ -103,11 +96,12 @@ out6.value = (( (T5 - currep) / repstanding) * 30) ;
 <body>
 
 <div class="container">
-
 <div class="row">
 <div class="col-md-4">.</div>
 
 </div>
+
+
 <div class="row">
 	<div class="col-md-4">
 	
@@ -133,19 +127,19 @@ out6.value = (( (T5 - currep) / repstanding) * 30) ;
       
    <div class="panel panel-primary">
    <div class="panel-heading">Weapon Power Overcap Calculator</div>
-	<div class="panel-body">
-	<p>Specify your 'Power Transfer Rate'
-	<br> (<b>in system space</b>: Ship Info > General Information)</p>
-	<form id="overcap" oninput="updateOutput()">
-	<p>Power Transfer Rate</p>
-	<input name="powerrate" type="number" value="0" />
-	<br><br><br>
-	<p>Weapon Power Hard Cap</p>
-	<output name="hardcap" for="x y">0</output>
-	<br><br><br>
-	<p>Total Weapon Power</p>
-	<output name="totalpower" for="x y">0</output>
-	</form> 
+				<div class="panel-body">
+					<p>Specify your 'Power Transfer Rate'
+					<br> (<b>in system space</b>: Ship Info > General Information)</p>
+					<form id="overcap" oninput="updateOutput()">
+					<p>Power Transfer Rate</p>
+						<input name="powerrate" type="number" value="0" />
+						<br><br><br>
+						<p>Weapon Power Hard Cap</p>
+						<output name="hardcap" for="x y">0</output>
+						<br><br><br>
+						<p>Total Weapon Power</p>
+						<output name="totalpower" for="x y">0</output>
+					</form> 
      </p>
     </div>
    </div>
@@ -171,9 +165,9 @@ out6.value = (( (T5 - currep) / repstanding) * 30) ;
 						</select> 
 						<br><br>
 
-						<p>Remaining Reputation Points:</p>
+						<p>Remaining Reputation Points:
 						<output name="remainingrep" for="x y">0</output>
-						<br><br>
+						</p><br><br>
 						
 						
 						
