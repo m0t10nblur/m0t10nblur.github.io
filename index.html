@@ -48,11 +48,11 @@ out.value = 1 + (num1 * .01);
 out2.value = out.value * 8;
 
 //overcap
-	var form = parseFloat(document.getElementById("overcap").value.toFixed(2));
+	var form = document.getElementById("overcap");
 	var out3 = form.elements["hardcap"].toFixed(2);
 	var out4 = form.elements["totalpower"].toFixed(2);
 //	var out2 = form.elements["stacks"];
-	var powerrate = parseFloat(form.elements["powerrate"].value);
+	var powerrate = parseFloat(form.elements["powerrate"].value.toFixed(2));
 
 out3.value = (powerrate * 4).toFixed(2);
 out4.value = (out3.value + 125).toFixed(2);
@@ -60,7 +60,7 @@ out4.value = (out3.value + 125).toFixed(2);
 //reputation
 
 
-var form = parseFloat(document.getElementById("reputation").toFixed(2));
+	var form = parseFloat(document.getElementById("reputation").toFixed(2));
 	var out5 = form.elements["20hrs"];
 	var out6 = form.elements["20hrsmarks"];
 	var out7 = form.elements["1hrs"];
