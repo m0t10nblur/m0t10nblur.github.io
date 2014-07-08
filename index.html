@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link data-require="bootstrap-css@3.0.2" data-semver="3.0.2" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
-  <link data-require="bootstrap@*" data-semver="3.0.2" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
-  <script data-require="jquery@2.0.3" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-  <script data-require="bootstrap@*" data-semver="3.0.2" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-  <script data-require="angular.js@1.2.1" data-semver="1.2.1" src="http://code.angularjs.org/1.2.1/angular.js"></script>
+
+  <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+  <link href="bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Jura:400,500,600' rel='stylesheet' type='text/css' />
   
 <title>STOCalcs - Somewhat Useful Calculators for Star Trek Online</title>
 <style type="text/css">
@@ -14,12 +13,13 @@ input[type="number"] {
 width:80px; height:30px; 
 text-align:center; 
 margin:3px; 
-float:left;}
-
-/*select and equals elements*/
-select, .equals {
-margin:3px; 
-float:left;}
+float:left;
+/*
+font-family: 'Jura', sans-serif;
+font-weight: 600;
+font-size: small;
+*/
+}
 
 /*output element*/
 output {
@@ -31,7 +31,17 @@ margin:3px; padding:2px;
 text-align:center; 
 background:#428bca; 
 color:#ffffff; 
+<<<<<<< HEAD
+float:left;
+/*
+font-family: 'Jura', sans-serif;
+font-weight: 600;
+font-size: small;
+*/
+ }
+=======
 float:left; } 
+>>>>>>> FETCH_HEAD
 </style>
 
 
@@ -40,12 +50,12 @@ float:left; }
 function updateOutput() { 
 		//leech
 	var form = document.getElementById("leechcalc");
-	var out = form.elements["drain"];
-	var out2 = form.elements["stacks"];
-	var num1 = parseInt(form.elements["flowcaps"].value);
+	var drain = form.elements["drain"];
+	var stacks = form.elements["stacks"];
+	var flowcaps = parseInt(form.elements["flowcaps"].value);
 
-out.value = 1 + (num1 * .01);
-out2.value = out.value * 8;
+drain.value = (1 + (flowcaps * .01)).toFixed(2);
+stacks.value = drain.value * 8;
 
 //overcap
 	var form = document.getElementById("overcap");
@@ -54,7 +64,11 @@ out2.value = out.value * 8;
 //	var out2 = form.elements["stacks"];
 	var ptr = parseFloat(form.elements["powerrate"].value);
 
+<<<<<<< HEAD
+out3.value = (parseFloat( (ptr * 4))).toFixed(2);
+=======
 out3.value = parseFloat( (ptr * 4));
+>>>>>>> FETCH_HEAD
 out4.value = parseFloat(out3.value) + 125;
 
 //reputation
@@ -81,7 +95,7 @@ switch(repstanding)
 	  	break;
 		case 5000: out8.value = ( (T5 - currep) / 400);
 		break;
-			default:
+			default: out7.value = ( (T5 - currep) / 200);
 	  	break;
 	}
 
@@ -93,6 +107,8 @@ out6.value = (( (T5 - currep) / repstanding) * 30) ;
 //out8.value = (( (T5 - currep) / repstanding) * 30) ;
 
 //out7.value = standing;
+
+}
 
 
 </script>
@@ -199,6 +215,23 @@ out6.value = (( (T5 - currep) / repstanding) * 30) ;
 
 
 		</div>
+</div>
+
+<div class="row">
+<div class="col-md-4">
+<div class="panel panel-primary">
+   <div class="panel-heading">Tip Jars</div>
+				<div class="panel-body">
+
+
+<p>If you find this useful, please consider a donation. Thank you!</p>
+
+<p>Dogecoin:<br>DAvp5eNp9bnNc5UFrNRQKagfHHWM9Cprwr</p>
+<p>Litecoin:<br>LW2eGFe9tr5K5GDxmHpt7RQ7YR2xmsn5Ne</p>
+<p>Bitcoin:<br>17A4x2LU64wmwLmCEBLGVf1LxWXYq5aRa</p>
+
+</div>
+
 </div>
 </div>
 </body>
