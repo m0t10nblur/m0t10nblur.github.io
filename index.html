@@ -60,7 +60,8 @@ out4.value = parseFloat(out3.value) + 125;
 //reputation
 
 
-	var form = parseInt(document.getElementById("reputation"));
+var form = document.getElementById("reputation");
+		//get output
 	var out5 = form.elements["20hrs"];
 	var out6 = form.elements["20hrsmarks"];
 	var out7 = form.elements["1hrs"];
@@ -68,10 +69,13 @@ out4.value = parseFloat(out3.value) + 125;
 	var out9 = form.elements["remainingrep"];
 	var T5 = 100000;
 	
+		//get two numbers
 	var currep = parseInt(form.elements["currentrep"].value);
-
+	//var num2 = parseInt(form.elements["y"].value);
+		//get operator
 	var repstanding = parseInt(form.elements["standing"].value);
-	switch(repstanding)
+		//set output depending on operator
+switch(repstanding)
 	{
 		case 2500: out7.value = ( (T5 - currep) / 200);
 	  	break;
@@ -85,12 +89,16 @@ out4.value = parseFloat(out3.value) + 125;
 out9.value = T5 - currep;
 out5.value = ( (T5 - currep) / repstanding);
 out6.value = (( (T5 - currep) / repstanding) * 30) ;
+//out7.value = ( (T5 - currep) / repstanding);
+//out8.value = (( (T5 - currep) / repstanding) * 30) ;
 
+//out7.value = standing;
 
 }
 
 
 </script>
+
 
 </head>
 <body>
