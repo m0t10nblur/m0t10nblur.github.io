@@ -110,6 +110,22 @@ out6.value = (( (T5 - currep) / repstanding) * 30) ;
 	var wce = parseFloat(form.elements["warpcoreefficiency"].value);
 	var systempowersetting = parseFloat(form.elements["systempowersetting"].value);
 	var systembonuspower = form.elements["systembonuspower"];
+<<<<<<< HEAD
+
+
+systembonuspower.value = ((wce/533.333)*(75-systempowersetting)).toFixed(3);
+
+//Subsystem Power Bonus = ( Skill Level / 533.3333... ) * ( 75 - Current Subsystem Power Setting )
+
+
+		//Starship Engine Performance
+	var form = document.getElementById("SEP");
+	var sepr = parseInt(form.elements["SEPR"].value);
+	var eplg = form.elements["EPLG"];
+
+eplg.value = (sepr/10).toFixed(2);
+
+=======
 
 
 systembonuspower.value = ((wce/533.333)*(75-systempowersetting)).toFixed(3);
@@ -137,8 +153,25 @@ transtot.value = ((sepsr/20) + 5);
 
 
 }
+>>>>>>> FETCH_HEAD
+
+		//Starship Electro-Plasma System
+	var form = document.getElementById("SEPS");
+	var sepsr = parseInt(form.elements["SEPSR"].value);
+	var tbps = form.elements["TBPS"];
+	var transtot = form.elements["TransTotal"];
+
+<<<<<<< HEAD
+tbps.value = (sepsr/20);
+transtot.value = ((sepsr/20) + 5);
 
 
+
+}
+
+
+=======
+>>>>>>> FETCH_HEAD
 </script>
 </head>
 <body>
@@ -155,15 +188,24 @@ transtot.value = ((sepsr/20) + 5);
 					<form id="efficiencycalc" oninput="updateOutput()">
 					<p>Subsystem Power Level Setting</p>
 					<select name="systempowersetting" onchange="updateOutput()">
+<<<<<<< HEAD
 					  <option value="15">15</option>
+=======
+					<option value="15">15</option>
+>>>>>>> FETCH_HEAD
 					  <option value="20">20</option>
 					  <option value="25">25</option>
 					  <option value="30">30</option>
 					  <option value="35">35</option>
 					  <option value="40">40</option>
 					  <option value="45">45</option>
+<<<<<<< HEAD
 					  <option value="50">55</option>
 					  <option value="55">60</option>
+=======
+					  <option value="50">50</option>
+					  <option value="55">55</option>
+>>>>>>> FETCH_HEAD
 					  <option value="65">65</option>
 					  <option value="70">70</option>
 					  <option value="75">75</option>
@@ -334,6 +376,7 @@ transtot.value = ((sepsr/20) + 5);
 </div>
 
 <div class="row">
+<<<<<<< HEAD
 	<div class="col-md-4">
 		<div class="panel panel-primary">
    <div class="panel-heading">Tip Jar</div>
@@ -345,6 +388,20 @@ transtot.value = ((sepsr/20) + 5);
 					</div>
 				</div>
 				</div>
+=======
+<div class="col-md-4">
+<div class="panel panel-primary">
+   <div class="panel-heading">Tip Jars</div>
+				<div class="panel-body">
+
+
+<p>If you find this useful, please consider a donation. The amount is up to you! Thank you!</p>
+
+<p><b>Dogecoin:</b><br>DAvp5eNp9bnNc5UFrNRQKagfHHWM9Cprwr</p>
+<p><b>Litecoin:</b><br>LW2eGFe9tr5K5GDxmHpt7RQ7YR2xmsn5Ne</p>
+<p><b>Bitcoin:</b><br>17A4x2LU64wmwLmCEBLGVf1LxWXYq5aRa</p>
+
+>>>>>>> FETCH_HEAD
 </div>
 
 <div class="row">
