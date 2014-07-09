@@ -105,7 +105,7 @@ out6.value = (( (T5 - currep) / repstanding) * 30) ;
 //out7.value = standing;
 
 
-		//leech
+		//Warp Core Efficiency
 	var form = document.getElementById("efficiencycalc");
 	var wce = parseFloat(form.elements["warpcoreefficiency"].value);
 	var systempowersetting = parseFloat(form.elements["systempowersetting"].value);
@@ -116,18 +116,122 @@ systembonuspower.value = ((wce/533.333)*(75-systempowersetting)).toFixed(3);
 
 //Subsystem Power Bonus = ( Skill Level / 533.3333... ) * ( 75 - Current Subsystem Power Setting )
 
+
+		//Starship Engine Performance
+	var form = document.getElementById("SEP");
+	var sepr = parseInt(form.elements["SEPR"].value);
+	var eplg = form.elements["EPLG"];
+
+eplg.value = (sepr/10).toFixed(2);
+
+
+		//Starship Electro-Plasma System
+	var form = document.getElementById("SEPS");
+	var sepsr = parseInt(form.elements["SEPSR"].value);
+	var tbps = form.elements["TBPS"];
+	var transtot = form.elements["TransTotal"];
+
+tbps.value = (sepsr/20);
+transtot.value = ((sepsr/20) + 5);
+
+
+
 }
 
 
 </script>
-
-
 </head>
 <body>
 
 <div class="container">
 <div class="row">
-<div class="col-md-4">.</div>
+<h3>Ship Systems</h3>
+<div class="col-md-4">
+				<div class="panel panel-primary">
+			<div class="panel-heading">Warp Core Efficiency <span class="label label-warning">New</span></div>
+				<div class="panel-body">
+					<p>Specify your current Subsystem Power Level Setting and <a href="http://sto.gamepedia.com/Skill:_Starship_Warp_Core_Efficiency" target="_blank">Warp Core Efficiency Skill Rating</a></p>
+					<!-- <br> (<b>in system space</b>: Ship Info > Skill-based Space Stats)</p> -->
+					<form id="efficiencycalc" oninput="updateOutput()">
+					<p>Subsystem Power Level Setting</p>
+					<select name="systempowersetting" onchange="updateOutput()">
+					  <option value="15">15</option>
+					  <option value="20">20</option>
+					  <option value="20">25</option>
+					  <option value="20">30</option>
+					  <option value="20">35</option>
+					  <option value="20">40</option>
+					  <option value="20">45</option>
+					  <option value="20">50</option>
+					  <option value="20">60</option>
+					  <option value="20">65</option>
+					  <option value="20">70</option>
+					  <option value="20">75</option>
+<!--
+					  <option value="20">80</option>
+					  <option value="20">85</option>
+					  <option value="20">90</option>
+							<option value="20">95</option>
+					  <option value="20">100</option>
+-->
+						</select>
+					<!-- 	<input name="systempowersetting" type="number" value="0" /> -->
+						<br><br>
+						<p>Warp Core Efficiency Rating</p>
+						<input name="warpcoreefficiency" type="number" value="0" for="x y" />
+						<br><br><br>
+						<p>Total Subsystem Bonus Power</p>
+						<output name="systembonuspower" for="flowcaps drain">0</output>
+					</form> 
+     </p>
+    </div>
+   </div>
+		
+</div> <!-- column -->
+
+
+<div class="col-md-4">
+	
+		<div class="panel panel-primary">
+			<div class="panel-heading">Starship Engine Performance <span class="label label-warning">New</span></div>
+				<div class="panel-body">
+					<form id="SEP" oninput="updateOutput()">
+					<p>Starship Engine Performance Rating</p>
+						<input name="SEPR" type="number" value="0" />
+						<br><br><br>
+						<p>Engine Power Level Gain</p>
+						<output name="EPLG" for="x y">0</output>
+
+					</form> 
+     </p>
+    </div>
+   </div>
+
+</div> <!-- column -->
+
+<div class="col-md-4">
+	
+		<div class="panel panel-primary">
+			<div class="panel-heading">Starship Electro-Plasma System <span class="label label-warning">New</span></div>
+				<div class="panel-body">
+					<form id="SEPS" oninput="updateOutput()">
+					<p>Starship Electro-Plasma System Rating</p>
+						<input name="SEPSR" type="number" value="0" />
+						<br><br><br>
+						<p>Transfer Bonus Per Second</p>
+						<output name="TBPS" for="x y">0</output>
+						<br><br><br>
+						<p>Transfer Total</p>
+						<output name="TransTotal" for="x y">0</output>
+					</form> 
+     </p>
+    </div>
+   </div>
+
+</div> <!-- column -->
+
+
+
 
 </div>
 
@@ -223,46 +327,7 @@ systembonuspower.value = ((wce/533.333)*(75-systempowersetting)).toFixed(3);
 </div>
 	<div class="col-md-4">
 
-		<div class="panel panel-primary">
-			<div class="panel-heading">Warp Core Efficiency Calculator</div>
-				<div class="panel-body">
-					<p>Specify your current Subsystem Power Level Setting and <a href="http://sto.gamepedia.com/Skill:_Starship_Warp_Core_Efficiency" target="_blank">Warp Core Efficiency Skill Rating</a></p>
-					<!-- <br> (<b>in system space</b>: Ship Info > Skill-based Space Stats)</p> -->
-					<form id="efficiencycalc" oninput="updateOutput()">
-					<p>Subsystem Power Level Setting</p>
-					<select name="systempowersetting" onchange="updateOutput()">
-					  <option value="15">15</option>
-					  <option value="20">20</option>
-					  <option value="20">25</option>
-					  <option value="20">30</option>
-					  <option value="20">35</option>
-					  <option value="20">40</option>
-					  <option value="20">45</option>
-					  <option value="20">50</option>
-					  <option value="20">60</option>
-					  <option value="20">65</option>
-					  <option value="20">70</option>
-					  <option value="20">75</option>
-<!--
-					  <option value="20">80</option>
-					  <option value="20">85</option>
-					  <option value="20">90</option>
-							<option value="20">95</option>
-					  <option value="20">100</option>
--->
-						</select>
-					<!-- 	<input name="systempowersetting" type="number" value="0" /> -->
-						<br><br>
-						<p>Warp Core Efficiency Rating</p>
-						<input name="warpcoreefficiency" type="number" value="0" for="x y" />
-						<br><br><br>
-						<p>Total Subsystem Bonus Power</p>
-						<output name="systembonuspower" for="flowcaps drain">0</output>
-					</form> 
-     </p>
-    </div>
-   </div>
-   
+	   
    
 		</div>
 </div>
