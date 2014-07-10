@@ -167,8 +167,7 @@ text-align:left;
 </div> <!-- column -->
 
 <div class="col-md-4">
-	
-		<div class="panel panel-primary">
+			<div class="panel panel-primary">
 			<div class="panel-heading">Starship Warp Core Potential <span class="label label-warning">New</span></div>
 				<div class="panel-body">
 					<form id="WCP" oninput="updateOutput()">
@@ -186,7 +185,34 @@ text-align:left;
 </div> <!-- column -->
 
 
+<div class="col-md-4">
+			<div class="panel panel-primary">
+			<div class="panel-heading">Nukara Auxilary Power Configuration - Offense/Defense <span class="label label-warning text-right">New - 7/10/2014</span></div>
+				<div class="panel-body">
+					<form id="napc" oninput="updateOutput()">
+					<p>Starship Auxilary Power Level</p>
+						<input name="SAPL" type="number" value="0" />
+						<br><br><br>
+						<p>Bonus Accuracy</p>
+						<output name="nukacc" for="">0</output><p class="percent">%</p>
+						<br><br>
+						<p>Bonus Damage</p>
+						<output name="nukdmg" for="">0</output><p class="percent">%</p>
+						<br><br>
+						<p>Bonus Hull Capacity</p>
+						<output name="nukhull" for="">0</output><p class="percent">%</p>
+						<br><br>
+						<p>Bonus Shield Capacity</p>
+						<output name="nukshield" for="">0</output><p class="percent">%</p>
+						<br><br>
+						<p>Bonus All Damage Resistance</p>
+						<output name="nukdr" for="">0</output><p class="percent">%</p>
+					</form> 
+     </p>
+    </div>
+   </div>
 
+</div> <!-- column -->
 
 
 
@@ -197,8 +223,7 @@ text-align:left;
 <div class="row">
 <h4>Misc. Calculators</h4>
 	<div class="col-md-4">
-	
-		<div class="panel panel-primary">
+			<div class="panel panel-primary">
 			<div class="panel-heading">Plasmonic Leech Drain Calculator</div>
 				<div class="panel-body">
 					<p>Specify your 'Starship Flow Capacitors' rating
