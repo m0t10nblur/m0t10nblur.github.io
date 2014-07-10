@@ -100,5 +100,5 @@ transtot.value = ((sepsr/20) + 5);
 	var shieldpower = parseInt(form.elements["ShieldPower"].value);
 	var shielddr = form.elements["ShieldDR"];
 
-shielddr.value = (shieldpower/357.12).toFixed(2);
+shielddr.value = parseInt(((shieldpower/357.12)*100));
 }
