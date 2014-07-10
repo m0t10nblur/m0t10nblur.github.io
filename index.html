@@ -58,7 +58,8 @@ font-size: small;
 					<!-- <br> (<b>in system space</b>: Ship Info > Skill-based Space Stats)</p> -->
 					<form id="efficiencycalc" oninput="updateOutput()">
 					<p>Subsystem Power Level Setting</p>
-					<select class="form-control" name="systempowersetting" onchange="updateOutput()">
+
+					<select class="" name="systempowersetting" onchange="updateOutput()">
 					  <option value="15">15</option>
 					  <option value="20">20</option>
 					  <option value="25">25</option>
@@ -73,6 +74,7 @@ font-size: small;
 					  <option value="70">70</option>
 					  <option value="75">75</option>
 						</select>
+
 						<br><br>
 						<p>Warp Core Efficiency Rating</p>
 						<input name="warpcoreefficiency" type="number" value="0" for="x y" />
@@ -114,8 +116,10 @@ font-size: small;
 			<div class="panel-heading">Starship Shield Damage Resist <span class="label label-warning">New</span></div>
 				<div class="panel-body">
 					<form id="SDR" oninput="updateOutput()">
-					<p><a href="http://sto.gamepedia.com/Skill:_Starship_Engine_Performance">Current Shield Power:</a></p>
+					<p>>Current Shield Power</p>
+
 						<input name="ShieldPower" type="number" value="0" />
+
 						<br><br>
 						<p>Shield Damage Resist</p>
 						<output name="ShieldDR" for="x y">0</output>
