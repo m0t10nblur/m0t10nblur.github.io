@@ -115,11 +115,11 @@ shielddr.value = parseInt(((shieldpower/357.12)*100));
 
 shielddr.value = parseInt(((shieldpower/357.12)*100));
 
-nukacc.value = (auxpower * .05);
+nukacc.value = (auxpower * .05).toFixed(2);
 nukdmg.value = nukacc.value;
 nukhull.value = nukacc.value;
 nukshield.value = nukacc.value;
-nukdr.value = (auxpower * .20);
+nukdr.value = (auxpower * .20).toFixed(2);
 
 
 
