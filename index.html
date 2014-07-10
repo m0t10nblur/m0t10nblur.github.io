@@ -38,7 +38,18 @@ font-family: 'Jura', sans-serif;
 font-weight: 600;
 font-size: small;
 */
- }
+}
+
+.percent {
+display:block; 
+	margin:0px; padding-top: 5px;
+text-align:left; 
+/* background:#428bca; */ 
+/* color:#ffffff;  */
+/* float:left; */
+}
+
+ 
 
 </style>
 
@@ -113,7 +124,7 @@ font-size: small;
 <div class="col-md-4">
 	
 		<div class="panel panel-primary">
-			<div class="panel-heading">Starship Shield Damage Resist <span class="label label-warning">New</span></div>
+			<div class="panel-heading">Starship Shield Damage Resist <span class="label label-warning text-right">New - 7/10/2014</span></div>
 				<div class="panel-body">
 					<form id="SDR" oninput="updateOutput()">
 					<p>Current Shield Power</p>
@@ -122,7 +133,7 @@ font-size: small;
 
 						<br><br>
 						<p>Shield Damage Resist</p>
-						<output name="ShieldDR" for="x y">0</output>
+						<output name="ShieldDR" for="x y">0</output><p class="percent">%</p>
 
 					</form> 
      </p>
