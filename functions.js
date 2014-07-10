@@ -101,4 +101,26 @@ transtot.value = ((sepsr/20) + 5);
 	var shielddr = form.elements["ShieldDR"];
 
 shielddr.value = parseInt(((shieldpower/357.12)*100));
+
+
+
+		//Nukara Auxilary Power Configuration
+	var form = document.getElementById("napc");
+	var auxpower = parseInt(form.elements["SAPL"].value);
+	var nukacc = form.elements["nukacc"];
+	var nukdmg = form.elements["nukdmg"];
+	var nukhull = form.elements["nukhull"];
+	var nukshield = form.elements["nukshield"];
+	var nukdr = form.elements["nukdr"];
+
+shielddr.value = parseInt(((shieldpower/357.12)*100));
+
+nukacc.value = (auxpower * .05);
+nukdmg.value = nukacc.value;
+nukhull.value = nukacc.value;
+nukshield.value = nukacc.value;
+nukdr.value = (auxpower * .20);
+
+
+
 }
