@@ -121,6 +121,52 @@ nukhull.value = nukacc.value;
 nukshield.value = nukacc.value;
 nukdr.value = (auxpower * .20).toFixed(2);
 
+//Sector Space Speed
+	var form = document.getElementById("SectorSpeed");
+	var sdcr = parseInt(form.elements["SDCR"].value);
+	var ssds = parseInt(form.elements["SSDS"].value);	
+	var trans = form.elements["Trans"];
+	var dipimmune = form.elements["DipImmune"];
+	var raidparty = form.elements["RaidParty"];
+	var maco = form.elements["MACO"];
+	var acld = form.elements["ACLD"];
+	
+
+
+if (dipimmune.checked) {
+		dipimmuneNum = form.elements["DipImmune"].value;
+} else {
+		dipimmuneNum = 0;
+}
+
+if (raidparty.checked) {
+		raidpartyNum = form.elements["RaidParty"].value;
+} else {
+		raidpartyNum = 0;
+}
+
+if (maco.checked) {
+		macoNum = form.elements["MACO"].value;
+} else {
+		macoNum = 0;
+}
+
+if (acld.checked) {
+		acldNum = form.elements["ACLD"].value;
+} else {
+		acldNum = 0;
+}
+
+//trans.value = parseInt(dipimmuneNum) + parseInt(raidpartyNum);
+
+trans.value = ((100 + ((sdcr + parseInt(dipimmuneNum) + parseInt(raidpartyNum) + parseFloat(macoNum) + parseInt(acldNum))/2)) * (ssds/100)).toFixed(2);
+
+//trans.value = ((100 + ((sdcr + dipimmuneNum + raidpartyNum)/2)) * (ssds/100));
+
+
+
+
+
 
 
 }
