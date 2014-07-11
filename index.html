@@ -49,10 +49,7 @@ text-align:left;
 /* float:left; */
 }
 
- 
-
 </style>
-
 
 
 </head>
@@ -63,7 +60,7 @@ text-align:left;
 <h4>Starship Systems Calculators</h4>
 <div class="col-md-4">
 				<div class="panel panel-primary">
-			<div class="panel-heading">Warp Core Efficiency <span class="label label-warning">New</span></div>
+			<div class="panel-heading">Warp Core Efficiency <span class="label label-warning"></span></div>
 				<div class="panel-body">
 					<p>Specify your current Subsystem Power Level Setting and <a href="http://sto.gamepedia.com/Skill:_Starship_Warp_Core_Efficiency" target="_blank">Warp Core Efficiency Skill Rating</a></p>
 					<!-- <br> (<b>in system space</b>: Ship Info > Skill-based Space Stats)</p> -->
@@ -102,7 +99,7 @@ text-align:left;
 <div class="col-md-4">
 	
 		<div class="panel panel-primary">
-			<div class="panel-heading">Starship Electro-Plasma System <span class="label label-warning">New</span></div>
+			<div class="panel-heading">Starship Electro-Plasma System <span class="label label-warning"></span></div>
 				<div class="panel-body">
 					<form id="SEPS" oninput="updateOutput()">
 					<p><a href="http://sto.gamepedia.com/Skill:_Starship_Electro-Plasma_Systems">Starship Electro-Plasma System Rating</a></p>
@@ -150,7 +147,7 @@ text-align:left;
 <div class="col-md-4">
 	
 		<div class="panel panel-primary">
-			<div class="panel-heading">Starship Engine Performance <span class="label label-warning">New</span></div>
+			<div class="panel-heading">Starship Engine Performance <span class="label label-warning"></span></div>
 				<div class="panel-body">
 					<form id="SEP" oninput="updateOutput()">
 					<p><a href="http://sto.gamepedia.com/Skill:_Starship_Engine_Performance">Starship Engine Performance Rating</a></p>
@@ -168,7 +165,7 @@ text-align:left;
 
 <div class="col-md-4">
 			<div class="panel panel-primary">
-			<div class="panel-heading">Starship Warp Core Potential <span class="label label-warning">New</span></div>
+			<div class="panel-heading">Starship Warp Core Potential <span class="label label-warning"></span></div>
 				<div class="panel-body">
 					<form id="WCP" oninput="updateOutput()">
 					<p><a href="http://sto.gamepedia.com/Skill:_Starship_Warp_Core_Potential">Starship Warp Core Potential Rating</a></p>
@@ -228,7 +225,41 @@ text-align:left;
 </div> <!-- column -->
 
 
+<div class="col-md-4">
+			<div class="panel panel-primary">
+			<div class="panel-heading">Starship Sector Space Speed <span class="label label-warning">New - 7/11/2014</span></div>
+				<div class="panel-body">
+					<form id="SectorSpeed" oninput="updateOutput()">
+					<p><a href="">Starship Driver Coil Rating</a></p>
+						<input name="SDCR" type="number" value="0" />
+						<br><br>
+						<p><a href="">Impulse Engine/Slipstream Drive Speed</a></p>
+						<input name="SSDS" type="number" value="0" />
+						<br><br>
+						
+						<p><input name="DipImmune" type="checkbox" value="50" onchange="updateOutput()" />
+						<a href="">Diplomatic Immunity (50)</a>
+						</p>
 
+						
+							<p><input name="RaidParty" type="checkbox" value="50" onchange="updateOutput()" />
+							<a href="">Raiding Party (50)</a>
+						</p>
+						<p><input name="MACO" type="checkbox" value="8.8" onchange="updateOutput()" />
+							<a href="">M.A.C.O. Impulse Engine Mk XII (8.8)</a>
+						</p>
+						<p><input name="ACLD" type="checkbox" value="25" onchange="updateOutput()" />
+							<a href="">Antimatter Containment Leak Drills (25)</a>
+						</p>
+						<p>Maximum Transwarp Speed</p>
+						<output name="Trans" for="">0</output>
+
+					</form> 
+     </p>
+    </div>
+   </div>
+
+</div> <!-- column -->
 
 </div> <!-- row -->
 
