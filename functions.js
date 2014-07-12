@@ -157,14 +157,57 @@ if (acld.checked) {
 		acldNum = 0;
 }
 
-//trans.value = parseInt(dipimmuneNum) + parseInt(raidpartyNum);
 
 trans.value = ((100 + ((sdcr + parseInt(dipimmuneNum) + parseInt(raidpartyNum) + parseFloat(macoNum) + parseInt(acldNum))/2)) * (ssds/100)).toFixed(2);
 
-//trans.value = ((100 + ((sdcr + dipimmuneNum + raidpartyNum)/2)) * (ssds/100));
 
 
-
+//Impulse Speed
+	var form = document.getElementById("ImpulseSpeed");
+//	var impulsebase = 5;
+	var isdcr = parseInt(form.elements["ISDCR"].value);
+	var sitr = parseInt(form.elements["SITR"].value);
+	var impfs = parseFloat(form.elements["ImpFS"].value);
+	var fullimpfs = parseFloat(form.elements["FullImpFS"].value);
+	var cepl = parseInt(form.elements["CEPL"].value);
+	var impulsemod = parseFloat(form.elements["ImpulseMod"].value);	
+	var impulsetype = parseFloat(form.elements["ImpulseType"].value);
+	var tiermod = parseInt(form.elements["TierMod"].value);
+	var maximpulsespeed = form.elements["MaxImpulseSpeed"];
+	var impulsespeed = form.elements["ImpulseSpeed"];
+	
+	//captainstat = isdcr;
+	captainstat = sitr;
+	impulsebase = 5 + (sitr)/100;
+	
+//	impulsespeed.value = (impulsebase + ( ( ( ieds + ( cepl - 50) ) * impulsemod * impulsetype ) * ( ( 1 + captainstat / tiermod ) ) ) ).toFixed(2);
+	
+	
+	
+	maximpulsespeed.value = (parseInt(impulsebase + (impfs + (125 - 50) * impulsemod * impulsetype) * (1 + captainstat / tiermod)) + fullimpfs);
+	
+	
+	
+	
+	
+	impulsespeed.value = impulsebase + (impfs + (cepl - 50) * impulsemod * impulsetype) * (1 + captainstat / tiermod);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
