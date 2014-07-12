@@ -49,6 +49,20 @@ text-align:left;
 /* float:left; */
 }
 
+.panel-error {
+  border-color: #ff002c;
+}
+.panel-error > .panel-heading {
+  color: #ffffff;
+  background-color: #ff002c;
+  border-color: #ff002c;
+}
+
+.panel-error > p {
+	font-style: italic;
+	font-weight: bold;
+}
+
 </style>
 
 
@@ -223,8 +237,10 @@ text-align:left;
    </div>
 
 </div> <!-- column -->
+</div> <!-- row -->
 
 
+<div class="row">
 <div class="col-md-4">
 			<div class="panel panel-primary">
 			<div class="panel-heading">Starship Sector Space Speed <span class="label label-warning">New - 7/11/2014</span></div>
@@ -252,14 +268,78 @@ text-align:left;
 							<a href="">Antimatter Containment Leak Drills (25)</a>
 						</p>
 						<p>Maximum Transwarp Speed</p>
-						<output name="Trans" for="">0</output>
+						<output name="Trans" for="">0</output></p>
 
 					</form> 
-     </p>
-    </div>
+					    </div>
    </div>
 
 </div> <!-- column -->
+
+
+
+<div class="col-md-4">
+			<div class="panel panel-error">
+			<div class="panel-heading">Starship Full Impulse Speed <span class="label label-warning">New - 7/11/2014</span></div>
+				<div class="panel-body panel-error">
+				<p>**NOTE** This is a Work-In-Progress. Current calculations may not be 100% correct. Use as an approximation only.</p>
+					<form id="ImpulseSpeed" oninput="updateOutput()">
+					<p><a href="">Starship Driver Coil Rating</a></p>
+						<input name="ISDCR" type="number" value="0" />
+						<br><br>
+						<p><a href="">Starship Impulse Thrusters Rating</a></p>
+						<input name="SITR" type="number" value="0" />
+						<br><br>
+						<p><a href="">Impulse Flight Speed</a></p>
+						<input name="ImpFS" type="number" value="0" />
+						<br><br>
+						<p><a href="">Full Impulse Flight Speed</a></p>
+						<input name="FullImpFS" type="number" value="0" />
+						<br><br>
+						<p><a href="">Current Engine Power Level</a></p>
+						<input name="CEPL" type="number" value="0" />
+						<br><br>						
+						<p>Starship Impulse Modifier</p>
+					<select class="" name="ImpulseMod" onchange="updateOutput()">
+					  <option value=".20">Federation Escort (.20)</option>
+					  <option value=".17">Deep Space Science Vessel - Tier 5 (.17)</option>
+					  <option value=".15">Federation Science Vessel (.15)</option>
+					  <option value=".15">Federation Cruiser (.15)</option>
+						</select>
+						<br><br>
+
+						<p>Starship Impulse Engine Type Modifier</p>
+						<select class="" name="ImpulseType" onchange="updateOutput()">
+					  <option value="1.35">Hyper Impulse Engine (Eff at High Power Levels - 1.35)</option>
+					  <option value="1.0">Impulse Engine (1.0)</option>
+					  <option value=".6">Combat Impulse Engine (Eff at Low Power Levels - .6)</option>
+						</select>
+						<br><br>
+						
+						<p>Starship Tier Modifier</p>
+						<select class="" name="TierMod" onchange="updateOutput()">
+					  <option value="192">Tier 1 - 2 (192)</option>
+					  <option value="400">Tier 3 - 5 (400)</option>
+
+						</select>
+						<br><br>
+						
+						<p>Impulse Speed</p>
+						<output name="ImpulseSpeed" for="">0</output></p>
+						<br><br>
+						
+						
+						
+						<p>Maximum Full Impulse Speed</p>
+						<output name="MaxImpulseSpeed" for="">0</output></p>
+
+					</form> 
+					    </div>
+   </div>
+
+</div> <!-- column -->
+
+
 
 </div> <!-- row -->
 
